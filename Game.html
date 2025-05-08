@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educational Games Hub</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and Header */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f0f8ff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    /* Main Section - Game Cards */
+    main {
+      padding: 40px 10%;
+    }
+
+    .game-list {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .game-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: calc(33% - 2rem);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.05);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .game-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .game-card p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    /* Button Styles */
+    .btn {
+      background-color: #00b4d8;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0077b6;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #003d5b;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎓 Welcome to the Educational Games Hub</h1>
+    <p>Your learning adventure starts here! Choose a game to play and explore new topics.</p>
+  </header>
+
+  <main>
+    <section class="game-list">
+      <div class="game-card">
+        <img src="https://via.placeholder.com/150" alt="Game 1 Image" />
+        <h3>Memory Match: Ancient Greece</h3>
+        <p>Test your memory and learn about Ancient Greece!</p>
+        <button onclick="window.location.href='https://wordwall.net/resource/94a6904337e34c33aecd4091456f235c'" class="btn">Play Game</button>
+      </div>
+
+      <div class="game-card">
+        <img src="https://via.placeholder.com/150" alt="Game 2 Image" />
+        <h3>Spartan Training Simulator</h3>
+        <p>Train like a Spartan soldier in this interactive game.</p>
+        <button onclick="window.location.href='https://example.com/spartan-training'" class="btn">Play Game</button>
+      </div>
+
+      <div class="game-card">
+        <img src="https://via.placeholder.com/150" alt="Game 3 Image" />
+        <h3>Build Your Spartan City</h3>
+        <p>Design and build your own Spartan city from the ground up!</p>
+        <button onclick="window.location.href='https://example.com/spartan-city-builder'" class="btn">Play Game</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Educational Games Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // This script is empty for now, but you could add interactivity in the future
+    // Example: Add a function to track user clicks or add animations.
+  </script>
+</body>
+</html>
