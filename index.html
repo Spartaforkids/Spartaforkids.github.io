@@ -170,6 +170,55 @@
   background-color: #a55233;
 }
 
+    .name-generator {
+  margin: 50px 10%;
+  padding: 30px;
+  background: #e8dbc6;
+  border: 3px solid #8b3a22;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+.name-generator h2 {
+  font-size: 2rem;
+  color: #4b2b0b;
+  margin-bottom: 15px;
+}
+
+.name-generator input {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border: 2px solid #8b3a22;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.name-generator button {
+  padding: 10px 20px;
+  background-color: #8b3a22;
+  color: #fffdf5;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.name-generator button:hover {
+  background-color: #a55233;
+}
+
+#spartan-name-output {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #7a3f10;
+}
+
 
 
   </style>
@@ -231,6 +280,13 @@
   <p id="spartan-fact">Click the button to reveal a cool Spartan fact!</p>
   <button onclick="showRandomFact()">Tell Me a Fact</button>
 </section>
+    <section class="name-generator">
+  <h2>🏛️ What's Your Spartan Name?</h2>
+  <input type="text" id="real-name" placeholder="Enter your name">
+  <button onclick="generateSpartanName()">Generate</button>
+  <p id="spartan-name-output"></p>
+</section>
+
 
 <section class="sources-section">
   <h2>📚 Cited Sources</h2>
@@ -285,6 +341,25 @@
     }, 3000); // delay before fade starts (3 seconds)
   });
 </script>
+  <script>
+  function generateSpartanName() {
+    const prefixes = ["Leon", "Thermo", "Kleo", "Xeno", "Doro", "Kratos", "Helio"];
+    const suffixes = ["idas", "icles", "ander", "onax", "tor", "ion", "archos"];
+    const name = document.getElementById("real-name").value.trim();
+
+    if (!name) {
+      document.getElementById("spartan-name-output").textContent = "Please enter a name!";
+      return;
+    }
+
+    const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
+    const suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
+
+    const spartanName = prefix + suffix;
+    document.getElementById("spartan-name-output").textContent = `${name}, your Spartan name is: ${spartanName}!`;
+  }
+</script>
+
 
 </body>
 </html>
