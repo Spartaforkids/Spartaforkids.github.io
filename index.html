@@ -25,7 +25,7 @@
       height: 100%;
       border: none;
     }
-    #spartan-loader {
+#spartan-loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -39,16 +39,27 @@
   z-index: 9999;
   font-family: 'Georgia', serif;
   color: #f7e8c5;
+  transition: opacity 1s ease;
 }
 
 .helmet {
   width: 80px;
   height: 80px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Corinthian_helmet.svg') no-repeat center center;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/b/b7/Corinthian_helmet_Denda_Staatliche_Antikensammlungen_4330.jpg') no-repeat center center;
   background-size: contain;
-  animation: pulse 1.2s infinite ease-in-out;
+  animation: pulse 1.5s infinite ease-in-out;
   margin-bottom: 20px;
   filter: drop-shadow(0 0 6px #f7c76e);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #f7c76e;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
 }
 
 #spartan-loader p {
@@ -58,25 +69,22 @@
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
 }
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 
   </style>
 </head>
 <body>
-  <div id="spartan-loader">
+ <div id="spartan-loader">
   <div class="helmet"></div>
+  <div class="spinner"></div>
   <p>Preparing for battle...</p>
 </div>
 
@@ -130,12 +138,13 @@
   <footer>
     <p>© 2025 Sparta for Kids. Learn strong. Live bold.</p>
   </footer>
-  <script>
+ <script>
   window.addEventListener("load", function () {
     const loader = document.getElementById("spartan-loader");
-    loader.style.transition = "opacity 0.5s ease";
-    loader.style.opacity = 0;
-    setTimeout(() => loader.remove(), 500);
+    setTimeout(() => {
+      loader.style.opacity = 0;
+      setTimeout(() => loader.remove(), 1000); // extra second for fade
+    }, 3000); // delay before fade starts (3 seconds)
   });
 </script>
 
