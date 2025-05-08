@@ -254,6 +254,42 @@
 .spartan-law button:hover {
   background-color: #a55233;
 }
+.featured-image {
+  margin: 60px auto;
+  padding: 30px;
+  background: #fcf5e3;
+  border: 2px solid #c4a266;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+.featured-image h2 {
+  font-size: 2rem;
+  color: #5b3b1d;
+  margin-bottom: 20px;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.featured-image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border: 4px solid #8b3a22;
+  border-radius: 8px;
+}
+
+.caption {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #4e3c2a;
+  font-style: italic;
+}
 
 
 
@@ -326,6 +362,13 @@
   <h2>📜 Create a Spartan Law</h2>
   <p id="law-output">Click below to generate a mighty Spartan law!</p>
   <button onclick="generateLaw()">Make a Law</button>
+</section>
+<section class="featured-image">
+  <h2>🖼️ Featured Spartan Image</h2>
+  <div class="image-wrapper">
+    <img src="spartan-image.jpg" alt="Spartan warrior or scene">
+    <p class="caption">A brave Spartan hoplite ready for battle, shield in hand.</p>
+  </div>
 </section>
 
 
