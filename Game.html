@@ -104,61 +104,11 @@
       font-size: 0.9rem;
     }
 
-    #spartan-loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #8b3a22, #2b1b17);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  font-family: 'Georgia', serif;
-  color: #f7e8c5;
-}
-
-.helmet {
-  width: 80px;
-  height: 80px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Corinthian_helmet.svg') no-repeat center center;
-  background-size: contain;
-  animation: pulse 1.2s infinite ease-in-out;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 6px #f7c76e);
-}
-
-#spartan-loader p {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px #000;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 
   </style>
 </head>
 <body>
-  <div id="spartan-loader">
-  <div class="helmet"></div>
-  <p>Preparing for battle...</p>
-</div>
-
+  
   <header>
     <h1>🎓 Welcome to the Educational Games Hub</h1>
     <p>Your learning adventure starts here! Choose a game to play and explore new topics.</p>
@@ -195,14 +145,7 @@
 
 
 
-    <script>
-  window.addEventListener("load", function () {
-    const loader = document.getElementById("spartan-loader");
-    loader.style.transition = "opacity 0.5s ease";
-    loader.style.opacity = 0;
-    setTimeout(() => loader.remove(), 500);
-  });
-</script>
+    
 
  
 </body>
