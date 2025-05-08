@@ -132,6 +132,43 @@
 .source a:hover {
   text-decoration: underline;
 }
+.did-you-know {
+  margin: 50px 10%;
+  padding: 30px;
+  background: linear-gradient(to right, #fff5e1, #f4dfc1);
+  border-left: 8px solid #8b3a22;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+  font-family: 'Georgia', serif;
+  color: #4b2b0b;
+  text-align: center;
+}
+
+.did-you-know h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.did-you-know p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.did-you-know button {
+  padding: 10px 20px;
+  background-color: #8b3a22;
+  color: #fffdf5;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+}
+
+.did-you-know button:hover {
+  background-color: #a55233;
+}
 
 
 
@@ -189,6 +226,12 @@
         <p>Did you know Spartan babies were tested for strength at birth? Find more wild facts!</p>
       </div>
     </section>
+    <section class="did-you-know">
+  <h2>⚔️ Did You Know?</h2>
+  <p id="spartan-fact">Click the button to reveal a cool Spartan fact!</p>
+  <button onclick="showRandomFact()">Tell Me a Fact</button>
+</section>
+
 <section class="sources-section">
   <h2>📚 Cited Sources</h2>
   <div class="sources-box">
@@ -216,6 +259,23 @@
   <footer>
     <p>© 2025 Sparta for Kids. Learn strong. Live bold.</p>
   </footer>
+  <script>
+  const facts = [
+    "Spartan boys started military training at age 7!",
+    "Sparta had two kings ruling at the same time.",
+    "Spartan warriors had red cloaks to hide blood in battle.",
+    "Women in Sparta could own land — rare in ancient Greece.",
+    "The Spartan shield was more important than the sword!",
+    "Helots were forced to grow food for the Spartan warriors.",
+    "Spartans spoke very little — it’s where the word ‘laconic’ comes from!"
+  ];
+
+  function showRandomFact() {
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    document.getElementById("spartan-fact").textContent = facts[randomIndex];
+  }
+</script>
+
  <script>
   window.addEventListener("load", function () {
     const loader = document.getElementById("spartan-loader");
