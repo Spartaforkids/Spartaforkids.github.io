@@ -45,7 +45,7 @@
 .helmet {
   width: 80px;
   height: 80px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/b/b7/Corinthian_helmet_Denda_Staatliche_Antikensammlungen_4330.jpg') no-repeat center center;
+  background: url('https://t4.ftcdn.net/jpg/05/61/09/11/360_F_561091177_27MfuJDQ3fW3Q2RIPiap9eE6IN5HMmef.jpg') no-repeat center center;
   background-size: contain;
   animation: pulse 1.5s infinite ease-in-out;
   margin-bottom: 20px;
@@ -218,6 +218,42 @@
   font-weight: bold;
   color: #7a3f10;
 }
+.spartan-law {
+  margin: 50px 10%;
+  padding: 30px;
+  background: #f9f1d4;
+  border: 3px dashed #8b3a22;
+  border-radius: 12px;
+  font-family: 'Georgia', serif;
+  color: #3a1e0d;
+  text-align: center;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+}
+
+.spartan-law h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.spartan-law p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  min-height: 60px;
+}
+
+.spartan-law button {
+  padding: 12px 24px;
+  background-color: #8b3a22;
+  color: #fffbe6;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.spartan-law button:hover {
+  background-color: #a55233;
+}
 
 
 
@@ -285,6 +321,11 @@
   <input type="text" id="real-name" placeholder="Enter your name">
   <button onclick="generateSpartanName()">Generate</button>
   <p id="spartan-name-output"></p>
+</section>
+<section class="spartan-law">
+  <h2>📜 Create a Spartan Law</h2>
+  <p id="law-output">Click below to generate a mighty Spartan law!</p>
+  <button onclick="generateLaw()">Make a Law</button>
 </section>
 
 
@@ -357,6 +398,23 @@
 
     const spartanName = prefix + suffix;
     document.getElementById("spartan-name-output").textContent = `${name}, your Spartan name is: ${spartanName}!`;
+  }
+</script>
+<script>
+  const laws = [
+    "All warriors must eat 30 olives before sunrise.",
+    "No sandals allowed during battle — bare feet only!",
+    "Training must begin after shouting 'For Sparta!' three times.",
+    "Every Spartan must wrestle a goat once a year.",
+    "Spartan children must know how to juggle shields.",
+    "Helmets must be polished using olive oil and sand.",
+    "Victory dances are required after each training session.",
+    "You must salute the sun every morning before sword practice."
+  ];
+
+  function generateLaw() {
+    const randomIndex = Math.floor(Math.random() * laws.length);
+    document.getElementById("law-output").textContent = laws[randomIndex];
   }
 </script>
 
