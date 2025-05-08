@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sparta for Kids</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      max-width: 800px;
+      margin: 30px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -28,6 +49,14 @@
      <a href="https://spartaforkids.github.io/Test/"> <button>Try out a Spartan TEST!</button></a>
       <a href="Map.html"> <button>Or Check out a Spartan MAP</button></a>
     </section>
+
+      <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  </div>
 
     <section class="topics">
       <div class="card">
