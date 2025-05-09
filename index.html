@@ -562,6 +562,19 @@
 
   window.addEventListener("resize", updateCarousel);
 </script>
+<audio id="click-sound" src="Pen Clicking .mp3" preload="auto"></audio>
+
+<script>
+  const clickSound = document.getElementById("click-sound");
+
+  document.addEventListener("click", () => {
+    // Reset if still playing
+    clickSound.currentTime = 0;
+    clickSound.play().catch(e => {
+      // Prevent error if not allowed yet (e.g., autoplay block)
+    });
+  });
+</script>
 
 
 </body>
